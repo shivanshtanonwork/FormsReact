@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Counter() {
     let [count, setCount] = useState(0)
@@ -6,6 +6,10 @@ export default function Counter() {
     let incCount = () => {
         setCount((currCount) => currCount + 1);
     }
+
+    useEffect(function printSomething() {
+        console.log("this is a side effect")
+    })
 
     return (
         <div>
